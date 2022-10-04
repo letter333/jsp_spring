@@ -1,0 +1,4 @@
+127.0.0.1 - - [02/Oct/2022:19:51:30 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [02/Oct/2022:19:51:31 +0900] "GET /StudyBasicJSP/ch04/pageDirectiveImport.jsp HTTP/1.1" 200 132
+0:0:0:0:0:0:0:1 - - [02/Oct/2022:19:51:42 +0900] "GET /StudyBasicJSP/ch04/pageDirectiveImport.jsp HTTP/1.1" 200 132
+0:0:0:0:0:0:0:1 - - [02/Oct/2022:19:52:09 +0900] "GET /StudyBasicJSP/ch04/pageDirectiveImport.jsp HTTP/1.1" 200 146
