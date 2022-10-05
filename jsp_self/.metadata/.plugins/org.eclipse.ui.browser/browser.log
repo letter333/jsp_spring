@@ -10,3 +10,17 @@
 10월 04, 2022 22:05:49.102 [17160:17772:1004/220549.101:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
 10월 04, 2022 22:11:18.117 [17160:13180:1004/221118.117:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
 10월 04, 2022 23:13:58.182 [17160:13180:1004/231358.181:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -7
+
+10월 05, 2022 22:53:36.884 NEW SESSION
+10월 05, 2022 22:53:36.884 [4668:5936:1005/225336.881:ERROR:device_event_log_impl.cc(214)] [22:53:36.881] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 05, 2022 22:53:36.884 [4668:5936:1005/225336.883:ERROR:device_event_log_impl.cc(214)] [22:53:36.883] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 05, 2022 22:54:34.579 [4668:3956:1005/225434.578:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+10월 05, 2022 23:11:33.884 [4668:13800:1005/231133.883:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+10월 05, 2022 23:11:33.890 [4668:5596:1005/231133.890:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+10월 05, 2022 23:44:10.482 [4668:13800:1005/234410.481:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+10월 05, 2022 23:53:21.875 [4668:13800:1005/235321.875:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+10월 06, 2022 24:03:32.955 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+10월 06, 2022 24:09:53.615 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+10월 06, 2022 24:13:26.111 [4668:13800:1006/001326.110:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+10월 06, 2022 24:40:28.258 [4668:5936:1006/004028.258:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 06, 2022 24:40:42.278 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
