@@ -18,6 +18,9 @@ public class Student {
 	}
 	
 	public void study() {
-		System.out.println("�л��̸� ���θ� �ض� �̸��̾�~!");
+		System.out.println(this.name+"학생이 ");
+		System.out.println(this.age+"살 답게");
+		System.out.println("공부합니다.");
+		System.out.println("학생이면 공부를 해라 이말이야~!");
 	}
 }

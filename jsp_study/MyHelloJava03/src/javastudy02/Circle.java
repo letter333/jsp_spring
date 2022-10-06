@@ -22,6 +22,7 @@ public class Circle {
 		PI = 3.14;
 	}
 	
+	
 	public double getArea() {
 		return r * r * PI;
 	}

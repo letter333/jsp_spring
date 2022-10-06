@@ -5,7 +5,7 @@ public class Rectangle {
 	private int h;
 	
 	public Rectangle() {
-		
+		System.out.println("네모 클래스 생성");
 	}
 	
 	//  w나 h 하나만 알아서 하나만 입력받는 경우를 정사각형으로 간주.
