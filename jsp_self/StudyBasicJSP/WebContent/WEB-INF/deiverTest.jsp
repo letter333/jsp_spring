@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <%@ page import = "java.sql.*" %>
 <!DOCTYPE html>
 <html>
@@ -17,9 +17,9 @@ String password = "seryong0217";
 
 Class.forName("oracle.jdbc.driver.OracleDriver");
 conn = DriverManager.getConnection(url, user, password);
-out.print("¼º°ø");
+out.print("ì„±ê³µ");
 } catch (SQLException ex) {
-	out.print("½ÇÆÐ");
+	out.print("ì‹¤íŒ¨");
 	out.print("SQLException : " + ex.getMessage());
 } finally {
 	if(conn != null) {
