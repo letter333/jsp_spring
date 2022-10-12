@@ -1,4 +1,4 @@
-package javastudy07;
+package javastudy06;
 
 import java.util.ArrayList;
 
@@ -9,9 +9,9 @@ public class HelloJava01_Seal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<GameCharacter> gamers = new ArrayList<GameCharacter>();
-		gamers.add(new GameCharacter("¶ÄÀÌ", "ÃÊ±Þ¸¶¹ý»ç"));
-		gamers.add(new GameCharacter("ÂÞ´Ï", "ÃÊ±ÞÀü»ç"));
-		gamers.add(new GameCharacter("²ó","Á÷¾÷ºÒ¸í"));
+		gamers.add(new GameCharacter("ï¿½ï¿½ï¿½ï¿½", "ï¿½Ê±Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½"));
+		gamers.add(new GameCharacter("ï¿½Þ´ï¿½", "ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½"));
+		gamers.add(new GameCharacter("ï¿½ï¿½","ï¿½ï¿½ï¿½ï¿½ï¿½Ò¸ï¿½"));
 		
 		for(int i = 0; i<gamers.size(); i++)
 			gamers.get(i).setLevel(1+10*i);
@@ -23,21 +23,21 @@ public class HelloJava01_Seal {
 		
 		ArrayList<Magician> magicians = new ArrayList<Magician>();
 		Magician m1 = new Magician();
-		m1.set_Class("¸¶¼ú»ç°°Àº¸¶¹ý»ç");
-		m1.setId("ÀÌÀº°á");
+		m1.set_class("ï¿½ï¿½ï¿½ï¿½ï¿½ç°°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		m1.setId("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		m1.setLevel(100);
 		m1.setMp(50);
 		magicians.add(m1);
 		
 		magicians.add(new Magician());
-		magicians.get(1).set_Class("´ëÅë·ÉÃÊÃ»¸¶¹ý»ç");
-		magicians.get(1).setId("ÃÖÇö¿ì");
+		magicians.get(1).set_class("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		magicians.get(1).setId("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		magicians.get(1).setLevel(100);
 		magicians.get(1).setMp(50);
 		
 		Magician m2 = new Magician();
-		m2.set_Class("´ë¸¶¹ý»ç¿´´ø¹ý»ç");
-		m2.setId("ÀÌµ¿ÁØ");
+		m2.set_class("ï¿½ë¸¶ï¿½ï¿½ï¿½ç¿´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		m2.setId("ï¿½Ìµï¿½ï¿½ï¿½");
 		m2.setLevel(34);
 		m2.setMp(3);
 		magicians.add(m2);
@@ -51,20 +51,20 @@ public class HelloJava01_Seal {
 		ArrayList<Novice> white_hands = new ArrayList<Novice>();
 		Novice n = new Novice();
 		n.setHp(30);
-		n.setId("°¡¶÷Å¸¿î¹é¼ö");
+		n.setId("ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½");
 		n.setLevel(34);
-		n.set_Class("³ëºñ½º");
+		n.set_class("ï¿½ï¿½ï¿½");
 		white_hands.add(n);
 		white_hands.add(new Novice());
 		white_hands.get(white_hands.size()-1).setHp(500);
-		white_hands.get(white_hands.size()-1).setId("°¡¶÷Å¸ÀÌ°Å");
+		white_hands.get(white_hands.size()-1).setId("ï¿½ï¿½ï¿½ï¿½Å¸ï¿½Ì°ï¿½");
 		white_hands.get(white_hands.size()-1).setLevel(1997);
-		white_hands.get(white_hands.size()-1).set_Class("½´ÆÛ³ëºñ½º");
+		white_hands.get(white_hands.size()-1).set_class("ï¿½ï¿½ï¿½Û³ï¿½ï¿½");
 		Novice n2 = new Novice();
 		n2.setHp(1030);
-		n2.setId("°øºÎ¾ÈÇÑ¼ö·á»ý");
+		n2.setId("ï¿½ï¿½ï¿½Î¾ï¿½ï¿½Ñ¼ï¿½ï¿½ï¿½ï¿½");
 		n2.setLevel(29);
-		n2.set_Class("¾ÆÇÂ¼Õ°¡¶ô");
+		n2.set_class("ï¿½ï¿½ï¿½Â¼Õ°ï¿½ï¿½ï¿½");
 		white_hands.add(n2);
 		
 		for (Novice novice : white_hands) {
