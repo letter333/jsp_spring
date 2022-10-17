@@ -164,7 +164,7 @@ public class BoardDBBean {
 		try {
 			conn = getConnection();
 			
-			pstmt = conn.prepareStatement("select * from board order by ref desc, re_step asc limit ?, ?");
+			pstmt = conn.prepareStatement("select * from (select * from board order by ref desc, re_step asc) where rownum <= ?,?");
 			pstmt.setInt(1, start - 1);
 			pstmt.setInt(2, end);
 			rs = pstmt.executeQuery();
