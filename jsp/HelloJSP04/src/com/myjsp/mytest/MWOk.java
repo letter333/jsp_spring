@@ -14,16 +14,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class ModifyOk
+ * Servlet implementation class MWOk
  */
-@WebServlet("/ModifyOk")
-public class ModifyOk extends HttpServlet {
+@WebServlet("/MWOk")
+public class MWOk extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ModifyOk() {
+    public MWOk() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -46,24 +46,13 @@ public class ModifyOk extends HttpServlet {
 	
 	protected void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session = request.getSession();
-		 
 		request.setCharacterEncoding("utf-8");
-		String strName = request.getParameter("name");
-		String strId= (String)session.getAttribute("id");
-		String strPw = request.getParameter("pw");
-		String strPhone = request.getParameter("phone") + "-" + request.getParameter("phone2") + "-" + request.getParameter("phone3");
-		String strGender = request.getParameter("gender");
+		HttpSession httpSession;
+		httpSession = request.getSession();
+		String strId = (String)httpSession.getAttribute("id");
+		String strQuery = String.format("delete from member where id = '%s'", strId);
+		System.out.println(strId + " " + strQuery);
 		
-		System.out.println(strName );
-		System.out.println(strId);
-		System.out.println(strPw);
-		System.out.println(strPhone);
-		System.out.println(strGender);
-		
-		String strQuery = String.format("update member set name = '%s', pw = '%s', hp = '%s', gender = '%s' where id = '%s'", strName, strPw, strPhone, strGender, strId);
-		
-		System.out.println(strQuery); 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");   
 		} catch (ClassNotFoundException e1) {
@@ -87,11 +76,12 @@ public class ModifyOk extends HttpServlet {
 			
 			if(i == 1) {
 				System.out.println("성공");
-				session.setAttribute("name", strName);
-				response.sendRedirect("modifyResult.jsp");
+				httpSession.invalidate();
+				response.sendRedirect("login.html");
 			} else {
 				System.out.println("실패");
-				response.sendRedirect("modify.jsp");
+				httpSession.invalidate();
+				response.sendRedirect("login.html");
 			}
 		} catch(Exception e) {
 			e.printStackTrace();
