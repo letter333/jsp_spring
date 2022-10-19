@@ -357,7 +357,7 @@ public class BoardDBBean {
 				dbpassword = rs.getString("password");
 				if(dbpassword.equals(article.getPassword())) {
 					sql = "update board set writer=?, email=?, subject=?, password=?";
-					sql += ", content=?, where num=?";
+					sql += ", content=? where num=?";
 					pstmt = conn.prepareStatement(sql);
 					
 					pstmt.setString(1, article.getWriter());

@@ -117,6 +117,9 @@ if(count > 0) {
 	
 	int pageBlock = 10;
 	int endPage = startPage + pageBlock - 1;
+	if(endPage > pageCount) {
+		endPage = pageCount;
+	}
 	if(endPage > 10) { %>
 	<a href="list.jsp?pageNum=<%=startPage - 10%>">[이전]</a>
 <% 	}
