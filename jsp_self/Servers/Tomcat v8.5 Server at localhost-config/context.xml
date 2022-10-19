@@ -25,13 +25,13 @@
     <!--
     <Manager pathname="" />
     -->
-	<Resource name="jdbc/webDB"
+	<Resource name="jdbc/jspboard"
 		auth="Container"
 		type="javax.sql.DataSource"
-		driverClassName="oracle.jdbc.driver.OracleDriver"
-		username="c##scott"
-		password="seryong0217"
-		url="jdbc:oracle:thin:@localhost:1521:xe"
+		driverClassName="com.mysql.jdbc.Driver"
+		username="letter33"
+		password="seryong0217!"
+		url="jdbc:mysql://localhost:3306/jspboard"
 		maxWait="5000">
 	</Resource>
 </Context>

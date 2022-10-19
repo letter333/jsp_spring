@@ -22,7 +22,7 @@ public class BoardDBBean {
 	private Connection getConnection() throws Exception {
 		Context initCtx = new InitialContext();
 		Context envCtx = (Context)initCtx.lookup("java:comp/env");
-		DataSource ds = (DataSource)envCtx.lookup("jdbc/webDB");
+		DataSource ds = (DataSource)envCtx.lookup("jdbc/jspboard");
 		return ds.getConnection();
 	}
 	
@@ -52,7 +52,7 @@ public class BoardDBBean {
 			}
 			
 			if(num != 0) {
-				sql = "update board set re_step=re_step+1";
+				sql = "update board set re_step=re_step+1 ";
 				sql += "where ref=? and re_step> ?";
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setInt(1, ref);
@@ -120,7 +120,7 @@ public class BoardDBBean {
 		try {
 			conn = getConnection();
 			
-			pstmt = conn.prepareStatement("select count(*)d from board");
+			pstmt = conn.prepareStatement("select count(*) from board");
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
@@ -164,7 +164,7 @@ public class BoardDBBean {
 		try {
 			conn = getConnection();
 			
-			pstmt = conn.prepareStatement("select * from (select * from board order by ref desc, re_step asc) where rownum <= ?,?");
+			pstmt = conn.prepareStatement("select * from board order by ref desc, re_step asc limit ?, ?");
 			pstmt.setInt(1, start - 1);
 			pstmt.setInt(2, end);
 			rs = pstmt.executeQuery();

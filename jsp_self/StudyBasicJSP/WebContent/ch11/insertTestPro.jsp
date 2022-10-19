@@ -13,11 +13,11 @@ Connection conn = null;
 PreparedStatement pstmt = null;
 String str = "";
 try {
-String jdbcUrl="jdbc:oracle:thin:@localhost:1521:xe";
-String dbId="c##scott";
-String dbPassword="seryong0217";
+String jdbcUrl="jdbc:mysql://localhost:3306/jspboard";
+String dbId="letter33";
+String dbPassword="seryong0217!";
 
-Class.forName("oracle.jdbc.driver.OracleDriver");
+Class.forName("com.mysql.jdbc.Driver");
 conn=DriverManager.getConnection(jdbcUrl, dbId, dbPassword);
 
 String sql="insert into member values (?, ?, ?, ?)";

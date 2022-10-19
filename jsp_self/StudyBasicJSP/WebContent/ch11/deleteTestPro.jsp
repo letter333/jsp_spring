@@ -11,7 +11,7 @@ PreparedStatement pstmt = null;
 ResultSet rs = null;
 
 try {
-	String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:xe";
+	String jdbcUrl = "com:oracle:thin:@localhost:1521:xe";
 	String dbId = "c##scott";
 	String dbPassword = "seryong0217";
 	
