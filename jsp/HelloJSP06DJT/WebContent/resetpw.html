@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="ResetPwOk" id="pwForm" method="post">
+아이디 : <input type="text" id="changeId" name="id" /><br />
+변경할 비밀번호 : <input type="password" id="changePw" name="pw" /><br />
+<input type="submit" value="비밀번호 변경" />
+</form>
+<script>
+let pwForm = document.querySelector("#pwForm")
+let idChange = document.querySelector("#changeId")
+let pwChange = document.querySelector("#changePw")
+pwForm.addEventListener("submit", function(evt) {
+	if(!idChange.value || !pwChange.value) {
+		alert('아이디와 비밀번호 모두 적으세요.')
+		evt.preventDefault()_
+	}
+})
+</script>
+</body>
+</html>
