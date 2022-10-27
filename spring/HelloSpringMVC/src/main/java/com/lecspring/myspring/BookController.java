@@ -89,11 +89,45 @@ public class BookController {
 	}
 	
 	@RequestMapping(value="/list")
-	public ModelAndView list(@RequestParam Map<String, Object> map) {
+	public ModelAndView list(@RequestParam Map<String, Object> map, @RequestParam(value="nowPage", required = false) String nowPage) {
+		double CNT = 3.0;
+		int LIMITCOUNT = (int)CNT;
+		if(nowPage != null) {
+			int now = Integer.parseInt(nowPage);
+			int skipCount = 0;
+			if(now > 1) {
+				skipCount = (now - 1) * LIMITCOUNT;
+			}
+			map.put("skipCount", skipCount);
+		} else {
+			map.put("skipCount", 0);
+		}
+		
 		List<Map<String, Object>> list = this.bookService.list(map);
 		
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("data", list);
+		int totalCount = (int)Math.ceil(this.bookService.countBookBoard(map) / CNT);
+		
+		int nowPos = nowPage == null ? 1 : Integer.parseInt(nowPage);
+		if(nowPos < 0) {
+			nowPos = 1;
+		}
+		mav.addObject("nowPage", nowPos);
+		
+		int endPage= (int)(Math.ceil(nowPos / CNT) * (LIMITCOUNT));
+		int startPage = 0;
+		if(endPage > totalCount) {
+			startPage = endPage - (LIMITCOUNT) + 1;
+			endPage = totalCount;
+		} else {
+			startPage = endPage - (LIMITCOUNT) + 1;
+		}
+		if(startPage <= 0) {
+			startPage = 1;
+		}
+		mav.addObject("startPage", startPage);
+		mav.addObject("endPage", endPage);
 		
 		if(map.containsKey("keyword")) {
 			mav.addObject("keyword", map.get("keyword"));
